@@ -85,3 +85,69 @@
 @media(max-width:1200px){.deal-summary{grid-template-columns:160px 1fr}.queue-item{grid-template-columns:minmax(240px,1.2fr) minmax(230px,.9fr) minmax(190px,.75fr)}}
 @media(max-width:900px){.queue-item{grid-template-columns:1fr 1fr}.queue-main{grid-column:1/-1}.deal-summary{grid-template-columns:180px 1fr}.pod-grid{grid-template-columns:repeat(3,1fr)}}
 @media(max-width:600px){.metric-card{height:112px;min-height:112px;padding:12px}.metric-label{font-size:8px;white-space:normal}.metric-heading{margin-bottom:8px}.metric-value{font-size:24px!important;margin-bottom:5px!important}.metric-note{font-size:9px}.queue-data{grid-template-columns:repeat(3,1fr)}.queue-data div{padding:0 6px}.deal-summary{grid-template-columns:125px 1fr;padding-left:12px;padding-right:12px}.deal-donut{width:92px;height:92px}.pod-grid{grid-template-columns:1fr 1fr}.pod-grid>div{min-height:66px}}
+
+/* Modifications II */
+:root{--canvas:#deebff}
+
+/* Functional date filter, retaining the existing filter appearance */
+.filters .date-filter{position:relative;padding-right:8px;cursor:pointer}
+.date-filter select{appearance:none;-webkit-appearance:none;border:0;background:transparent;color:#5f697c;font-size:11px;outline:0;padding:0 2px;cursor:pointer}
+.date-filter svg:last-child{pointer-events:none}
+
+/* Attention queue interaction refinements */
+.attention-live i{background:#d49432}
+.queue-item{cursor:pointer;transition:background-color .14s ease;border-radius:6px;grid-template-columns:minmax(244px,1.18fr) minmax(262px,1fr) minmax(190px,.76fr)}
+.queue-item:hover,.queue-item:focus-visible{background:#f3f7ff}
+.queue-item:focus-visible{outline:2px solid rgba(36,50,99,.18);outline-offset:-2px}
+.queue-item .queue-action button{cursor:pointer}
+.issue-detail{display:grid;grid-template-columns:1fr auto;gap:8px 18px;padding:5px 3px}
+.issue-detail span{font-size:9px;text-transform:uppercase;letter-spacing:.6px;color:#8a93a4}
+.issue-detail strong{font-size:11px;color:#242d40;text-align:right}
+.issue-detail p{grid-column:1/-1;margin:14px 0 0;padding-top:14px;border-top:1px solid var(--line);font-size:11px;line-height:1.55;color:#70798b}
+
+/* Stronger revenue hierarchy */
+.deal-list article:nth-child(1) .deal-bar i{background:#243263}
+.deal-list article:nth-child(2) .deal-bar i{background:#40558d}
+.deal-list article:nth-child(3) .deal-bar i{background:#5c76b1}
+.deal-list article:nth-child(4) .deal-bar i{background:#7f9bd0}
+.deal-list article:nth-child(5) .deal-bar i{background:#a9c1e8}
+.deal-summary{height:150px;flex-basis:150px;grid-template-columns:164px 1fr;padding-top:8px;padding-bottom:8px}
+.donut-wrap{height:132px}
+.deal-donut{width:128px;height:128px}
+.donut-track,.donut-segment{stroke-width:7.5}
+.donut-segment:hover,.donut-segment:focus{stroke-width:9}
+.donut-segment-0{stroke:#19316f}.donut-segment-1{stroke:#2857aa}.donut-segment-2{stroke:#3679d1}.donut-segment-3{stroke:#5799e3}.donut-segment-4{stroke:#8bbcf1}
+
+/* Follow-up score prominence */
+.health-score{min-height:116px;padding:18px 22px 14px;gap:22px}
+.score-ring{width:88px;height:88px;flex-basis:88px}
+.score-ring:before{inset:7px}
+.score-ring strong{font-size:22px}.score-ring span{font-size:9px}
+.health-score>div:last-child strong{font-size:16px}.health-score>div:last-child span{font-size:11px;line-height:1.35}
+.health-grid{padding-bottom:13px}
+
+/* Inbound and reorder branding */
+.mini-stats{background:#243263;border-color:#243263}
+.mini-stats div{border-right-color:rgba(255,255,255,.22)}
+.mini-stats strong,.mini-stats span{color:#fff}
+.mini-stats strong{font-weight:700}
+.lead-avatar{background:#243263;color:#fff}
+.pill-meeting{background:#243263;color:#fff}.pill-crm,.pill-reply{color:#243263}
+.reorder-list article{grid-template-columns:36px 1fr 118px 30px}
+.reorder-list article:nth-child(1) .likelihood i{background:#243263}
+.reorder-list article:nth-child(2) .likelihood i{background:#5670aa}
+.reorder-list article:nth-child(3) .likelihood i{background:#91a9d4}
+
+/* Orbal activity tiles and vertically balanced hours card */
+.pod-grid>div{background:#243263;border-color:#243263}
+.pod-grid>div strong,.pod-grid>div>span:last-child{color:#fff}
+.pod-icon{background:rgba(255,255,255,.14);color:#fff}
+.pod-grid>div.pod-blocker{background:#e9ebf0;border-color:#dfe2e8}
+.pod-grid>div.pod-blocker strong,.pod-grid>div.pod-blocker>span:last-child{color:#30394c}
+.pod-grid>div.pod-blocker .pod-icon{background:#f7dede;color:#b94040}
+.hours-card{align-items:center;justify-content:center;min-height:100%;padding-top:24px;padding-bottom:24px}
+.hours-card>div:last-child{display:flex;flex-direction:column;justify-content:center}
+
+@media(max-width:1200px){.queue-item{grid-template-columns:minmax(235px,1.08fr) minmax(258px,1fr) minmax(185px,.72fr)}}
+@media(max-width:900px){.queue-item{grid-template-columns:1fr 1fr}.deal-summary{grid-template-columns:185px 1fr}}
+@media(max-width:600px){.queue-item{grid-template-columns:1fr}.deal-summary{grid-template-columns:145px 1fr}.deal-donut{width:116px;height:116px}.reorder-list article{grid-template-columns:36px 1fr 88px 30px}.health-score{min-height:108px;padding-left:15px;padding-right:15px}.score-ring{width:78px;height:78px;flex-basis:78px}}
